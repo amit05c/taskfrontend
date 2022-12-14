@@ -40,7 +40,11 @@ const Register = () => {
       alert('Password not matching')
     } else {
       await axios
-        .post('https://kind-toad-clothes.cyclic.app/user/register', { ...data, pic })
+        .post('https://kind-toad-clothes.cyclic.app/user/register', {
+          ...data,
+          pic,
+          status: 'active',
+        })
         .then((res) => {
           if (res.data.message == 'Success') {
             setData(initialvalue)

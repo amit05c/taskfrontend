@@ -48,6 +48,7 @@ const Login = () => {
             navigate('/dashboard')
           }
         })
+        .catch((err) => alert(err.response.data.Error))
     }
   }
 
